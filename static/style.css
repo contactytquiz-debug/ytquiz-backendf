@@ -1,0 +1,223 @@
+:root {
+  --brand-primary: #f97316;       /* main orange */
+  --brand-primary-dark: #ea580c;  /* darker orange */
+  --brand-primary-light: #ffedd5; /* pale orange */
+  --brand-bg: #fff7ed;            /* warm light background */
+  --brand-surface: #ffffff;
+  --brand-text: #111827;          /* near-black for text */
+  --brand-muted: #6b7280;
+  --brand-border: #e5e7eb;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  padding-top: 80px; /* space for fixed navbar */
+  background-color: var(--brand-bg);
+  color: var(--brand-text);
+}
+
+/* LOGO */
+.logo-img {
+  height: 200px;    /* bigger logo, still fits within 56px navbar */
+  width: auto;
+  object-fit: cover;
+}
+/* NAVBAR */
+/* NAVBAR */
+.navbar.bg-white {
+  border-bottom: 1px solid var(--brand-border);
+}
+
+/* Force navbar to 56px and center contents */
+.navbar {
+  height: 60px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+/* Progress bar color matches brand orange */
+.progress-bar {
+  background-color: var(--brand-primary);
+}
+
+.navbar .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  color: var(--brand-primary) !important;
+  letter-spacing: 0.03em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--brand-text);
+  font-weight: 500;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+  color: var(--brand-primary-dark);
+}
+
+/* HERO SECTION */
+.hero-section {
+  min-height: 70vh;
+  background: linear-gradient(135deg, var(--brand-bg), var(--brand-primary-light));
+  color: var(--brand-text);
+  padding: 4rem 0;
+}
+
+.hero-card {
+  border-radius: 1.5rem;
+}
+
+/* HERO IMAGE */
+.hero-image-wrapper {
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+}
+
+/* Sections & scrolling */
+section {
+  scroll-margin-top: 72px; /* for anchor scroll */
+}
+
+/* Steps */
+/* Steps (How it works) */
+.step-card {
+  background-color: var(--brand-surface);
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(15, 23, 42, 0.08);
+  padding: 1.25rem 1.25rem 1rem;
+}
+
+.step-number {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 999px;
+  background: var(--brand-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+}
+
+/* Quiz question cards */
+.question-card {
+  border-radius: 0.75rem;
+  border: 1px solid var(--brand-border);
+  padding: 0.75rem 1rem;
+  background: #ffffff;
+}
+
+.question-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.option-label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+}
+
+/* Results */
+.result-item {
+  border-top: 1px solid var(--brand-border);
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.result-status {
+  font-weight: 600;
+}
+
+.result-status.correct {
+  color: var(--brand-primary-dark);
+}
+
+.result-status.incorrect {
+  color: #dc2626;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--brand-primary);
+  border-color: var(--brand-primary-dark);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--brand-primary-dark);
+  border-color: var(--brand-primary-dark);
+}
+
+.btn-outline-secondary {
+  border-color: var(--brand-primary-light);
+  color: var(--brand-text);
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+  border-color: var(--brand-primary);
+  color: var(--brand-primary-dark);
+  background-color: var(--brand-primary-light);
+}
+
+.btn-accent {
+  background-color: var(--brand-primary-dark);
+  border-color: var(--brand-primary-dark);
+  color: #ffffff;
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+  background-color: #c2410c;
+  border-color: #c2410c;
+  color: #ffffff;
+}
+
+/* Badge */
+.badge.bg-secondary {
+  background-color: #9ca3af !important;
+}
+
+/* Forms */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 0.2rem rgba(249, 115, 22, 0.25);
+}
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .hero-section h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero-section .lead {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    max-height: 220px;
+  }
+}

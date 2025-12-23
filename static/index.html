@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>YTQuiz – AI YouTube Playlist & Video Quiz Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/images/logof.png" type="image/png" />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <meta name="description"
+      content="YTQuiz turns any YouTube playlist or video into a concept-focused quiz with instant scoring and explanations. Perfect for teachers, institutes, and self-learners." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://ytquiz.netlify.app/" />
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+        <img
+          src="images/logof.png"
+          alt="YTQuiz logo"
+          class="logo-img me-2"
+        />
+        <!-- <span>YTQuiz</span> -->
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#who-for">Who it’s for</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#how-it-works">How it works</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#quiz-generator">Generate quiz</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#faq">FAQ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section d-flex align-items-center">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold mb-3">
+            Turn any YouTube playlist or video into an interactive quiz.
+          </h1>
+          <p class="lead mb-4">
+            Paste a YouTube link and let AI create a concept‑focused quiz with
+            detailed explanations. Ideal for teachers, institutes, and serious learners.
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="#quiz-generator" class="btn btn-primary btn-lg">
+              Generate a quiz
+            </a>
+            <a href="#how-it-works" class="btn btn-outline-secondary btn-lg">
+              See how it works
+            </a>
+          </div>
+          <p class="mt-3 text-muted small">
+            Supports both full playlists and single videos. Works best when
+            videos have subtitles or informative descriptions.
+          </p>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="hero-image-wrapper mb-3">
+            <img
+              src="images/image.png"
+              alt="Students taking an online quiz"
+              class="img-fluid hero-image shadow-sm"
+            />
+          </div>
+          <div class="hero-card shadow-lg rounded-4 p-4 bg-white">
+            <h5 class="fw-semibold mb-3">What YTQuiz does for you</h5>
+            <ul class="small mb-0 ps-3 text-muted">
+              <li class="mb-1">Reads your YouTube content (transcript or description).</li>
+              <li class="mb-1">Generates conceptual multiple‑choice questions with answers.</li>
+              <li class="mb-1">Provides explanations to build deeper understanding.</li>
+              <li class="mb-1">Instantly scores students’ attempts online.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT’S FOR -->
+  <section id="who-for" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Who is YTQuiz for?</h2>
+        <p class="text-muted">
+          Designed to fit into real teaching and learning workflows.
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Teachers & faculties</h5>
+              <p class="card-text text-muted">
+                Quickly create quizzes for your recorded lectures, flipped classroom content,
+                or revision playlists without writing every question by hand.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Coaching institutes</h5>
+              <p class="card-text text-muted">
+                Convert your topic‑wise playlists into test practice. Maintain consistent
+                quality and difficulty across batches with AI‑generated questions.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Self‑learners</h5>
+              <p class="card-text text-muted">
+                After finishing a playlist or key video, test yourself immediately. Identify
+                weak areas and rewatch only what you need to improve.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">How it works</h2>
+        <p class="text-muted mb-1">
+          From YouTube link to ready‑to‑attempt quiz in three simple steps.
+        </p>
+        <p class="text-muted small">
+          Paste a link, set your preferences, and YTQuiz handles the rest.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- STEP 1 -->
+        <div class="col-md-4">
+          <div class="step-card h-100">
+            <div class="d-flex align-items-center mb-2">
+              <div class="step-number me-2">1</div>
+              <h5 class="fw-semibold mb-0">Paste your YouTube link</h5>
+            </div>
+            <p class="text-muted small mb-0">
+              Copy a YouTube <strong>playlist</strong> or <strong>single video</strong> URL that contains
+              the lessons or topics you want to create a quiz from, and paste it into the generator form below.
+            </p>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="col-md-4">
+          <div class="step-card h-100">
+            <div class="d-flex align-items-center mb-2">
+              <div class="step-number me-2">2</div>
+              <h5 class="fw-semibold mb-0">Configure your quiz</h5>
+            </div>
+            <p class="text-muted small mb-0">
+              Choose how many questions you want per video, how many videos to include,
+              and the difficulty level. YTQuiz uses these settings to control the length and depth
+              of the quiz.
+            </p>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="col-md-4">
+          <div class="step-card h-100">
+            <div class="d-flex align-items-center mb-2">
+              <div class="step-number me-2">3</div>
+              <h5 class="fw-semibold mb-0">Generate & attempt the quiz</h5>
+            </div>
+            <p class="text-muted small mb-0">
+              Click <strong>Generate quiz</strong> to go to your dedicated quiz page.
+              YTQuiz creates concept‑focused questions from the content. Answer each question,
+              submit the quiz, and instantly see your score and explanations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ GENERATOR -->
+  <section id="quiz-generator" class="py-5 bg-light">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <h2 class="fw-bold mb-3">Generate a new quiz</h2>
+          <p class="text-muted">
+            Paste a YouTube playlist or video link, choose your preferences, and click
+            <strong>Generate quiz</strong>. You’ll be taken to a quiz page built just for this link.
+          </p>
+          <ul class="text-muted small">
+            <li>Supports both <strong>playlists</strong> and <strong>single videos</strong>.</li>
+            <li>Works best with videos that have subtitles or detailed descriptions.</li>
+            <li>Start with fewer videos and questions while testing the tool.</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="fw-semibold mb-3">Quiz settings</h5>
+              <!-- IDs used by script.js -->
+              <form id="generate-form" class="vstack gap-3">
+                <div>
+                  <label for="playlist-url" class="form-label fw-semibold">
+                    YouTube playlist or video URL
+                  </label>
+                  <input
+                    id="playlist-url"
+                    type="text"
+                    class="form-control"
+                    required
+                    placeholder="Paste a YouTube playlist or video link..."
+                  />
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-md-4">
+                    <label
+                      for="questions-per-video"
+                      class="form-label fw-semibold"
+                    >
+                      Questions per video
+                    </label>
+                    <input
+                      id="questions-per-video"
+                      type="number"
+                      min="1"
+                      max="10"
+                      value="2"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col-md-4">
+                    <label for="max-videos" class="form-label fw-semibold">
+                      Max videos
+                    </label>
+                    <input
+                      id="max-videos"
+                      type="number"
+                      min="1"
+                      max="10"
+                      value="3"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col-md-4">
+                    <label for="difficulty" class="form-label fw-semibold">
+                      Difficulty
+                    </label>
+                    <select id="difficulty" class="form-select">
+                      <option value="mixed" selected>Mixed</option>
+                      <option value="easy">Easy</option>
+                      <option value="medium">Medium</option>
+                      <option value="hard">Hard</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-3">
+                  <button
+                    type="submit"
+                    id="generate-button"
+                    class="btn btn-primary"
+                  >
+                    Generate quiz
+                  </button>
+                  <span
+                    id="loading-text"
+                    class="text-muted small d-none"
+                  >
+                    Redirecting to your quiz page…
+                  </span>
+                </div>
+
+                <p id="error-message" class="text-danger small mb-0"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section id="features" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Key capabilities</h2>
+        <p class="text-muted">
+          Built to give you meaningful, concept‑oriented questions – not random trivia.
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Concept‑focused questions</h5>
+              <p class="card-text text-muted">
+                Questions are generated to test understanding, reasoning, and application –
+                not just “what is taught in this video”. Each question includes a short explanation.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Playlist or single video</h5>
+              <p class="card-text text-muted">
+                Paste either an entire playlist link or a single YouTube video link.
+                YTQuiz automatically detects and generates questions from the available content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Instant evaluation</h5>
+              <p class="card-text text-muted">
+                Students submit answers directly on the site and immediately see their score and
+                explanations. Great for homework, practice, or quick checks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" class="py-5">
+    <div class="container" style="max-width: 900px;">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">Frequently asked questions</h2>
+      </div>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqOneHeading">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faqOne"
+              aria-expanded="true"
+              aria-controls="faqOne"
+            >
+              Does this work without video transcripts?
+            </button>
+          </h2>
+          <div
+            id="faqOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="faqOneHeading"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body small text-muted">
+              Yes. YTQuiz first tries to use the official transcript. If it is not available,
+              it falls back to the video’s title and description. Questions will still be
+              generated as long as there is some textual information to work with.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqTwoHeading">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faqTwo"
+              aria-expanded="false"
+              aria-controls="faqTwo"
+            >
+              What type of questions does YTQuiz create?
+            </button>
+          </h2>
+          <div
+            id="faqTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="faqTwoHeading"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body small text-muted">
+              YTQuiz focuses on <strong>conceptual, educational</strong> questions:
+              understanding definitions, applying ideas, reasoning about “why” something is true,
+              and distinguishing between related concepts. It avoids trivial “what is taught in this video”
+              type questions as much as possible.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqThreeHeading">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faqThree"
+              aria-expanded="false"
+              aria-controls="faqThree"
+            >
+              Can I share a quiz link directly with students?
+            </button>
+          </h2>
+          <div
+            id="faqThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="faqThreeHeading"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body small text-muted">
+              Yes. After you generate a quiz, you are redirected to a dedicated quiz page.
+              You can share that URL with your students so they can attempt the quiz and see
+              their results on their own devices.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-4 bg-white border-top">
+    <div
+      class="container d-flex flex-column flex-md-row justify-content-between align-items-center"
+    >
+      <p class="mb-2 mb-md-0 small text-muted">
+        © <span id="year"></span> YTQuiz. All rights reserved.
+      </p>
+      <p class="mb-0 small text-muted">
+        Built for modern classrooms. Powered by YouTube transcripts and AI.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Home page JS (redirects to /quiz) -->
+  <script src="/script.js?v=2"></script>
+</body>
+</html>
