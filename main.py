@@ -107,7 +107,7 @@ def generate_quiz(payload: GenerateQuizRequest):
     """
 
     # Clamp user inputs to avoid huge quiz requests
-    questions_per_video = max(1, min(payload.questionsPerVideo, 3))  # 1–3
+    questions_per_video = max(1, min(payload.questionsPerVideo, 10))  # 1–3
     max_videos = max(1, min(payload.maxVideos, 5))                   # 1–5
 
     raw_url = (payload.playlistUrl or "").strip()
@@ -262,4 +262,5 @@ def submit_quiz(payload: SubmitQuizRequest):
         total=total,
         percentage=percentage,
         results=results,
+
     )
